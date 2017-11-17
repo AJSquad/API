@@ -1,0 +1,206 @@
+head{
+
+}
+/* Main title on every page - Audatex Staff Directory*/
+h1{
+  text-align: center;
+  background:lightgrey;
+  font-size: 60px;
+  color: black;
+  font-weight: bolder;
+  margin: auto;
+}
+/*Page title*/
+h2{
+  text-align: center;
+  font-size: 45px;
+  color: black;
+  font-weight: bold;
+}
+
+h3{
+  text-align: left;
+  font-size: 35px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+/* Navigation Bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f2f2f2;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: Black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li {
+      border-right: 1px solid white;
+  }
+
+li a:not(.Sel):hover {
+    background-color: #e6e6e6;
+}
+/* Selected/active Button */
+.Sel{
+background-color: #ffe8cc ;
+color: black;
+font-weight: bold;
+font-size: 22px;}
+
+.Sel:hover{
+  background-color: green;
+}
+
+
+/* Writing on pages */
+p{
+margin-top: 5px;
+margin-left: 10px;
+}
+
+body{
+  font-size: 20px;
+  font-family: monospace;
+}
+
+.header{
+  object-fit: fill;
+}
+
+/* Add Profile Page */
+.formItems{
+
+  vertical-align: middle;
+  text-align: center;
+}
+
+#firstname{
+  background-color: #FBFBFB;
+}
+#lastname{
+  background-color: #FBFBFB;
+}
+#myAge{
+  background-color: #FBFBFB;
+}
+#myJobDesc{
+  background-color: #FBFBFB;
+}
+.textBox{
+  color: #CACACA;
+}
+
+/* Buttons to search on Delete and View pages */
+.searchButton{
+  background-color: lightgrey;
+  color: black;
+  cursor: pointer;
+  padding: 5px 8px;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 0px;
+  border-radius: 4px;
+
+}
+.searchButton:hover {
+    background-color: darkgrey;
+}
+
+.formDetails p{
+    display: inline;
+    vertical-align: top;
+    text-align: justify;
+    margin-left: 10px;
+    font-size: 30px;
+
+}
+.formDetails h4 {
+    display: inline;
+    vertical-align: top;
+    text-align: justify;
+    margin-left: 350px;
+    font-size: 30px;
+}
+
+.formDetails{
+  margin-top: 40px
+}
+
+/* Search Box in View Profile */
+input[type=text] {
+    align-content: center;
+    margin-left: 10px;
+    width: 200px;
+    height: 20px;
+    margin-bottom: 50px;
+    font-size: 13px;
+}
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 15%;
+}
+
+/* View All Page */
+
+select{
+  font-size: 18px;
+  background-color: #FBFBFB;
+}
+.SearchBar{
+  text-align: center;
+
+}
+
+.viewAllButton{
+  background-color: lightgrey;
+  color: black;
+  padding: 5px 8px;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 4px;
+}
+
+.viewAllButton:hover{
+  cursor: pointer;
+  background-color: darkgrey;
+}
+
+table{
+  margin:0px auto;
+  text-align: center;
+
+}
+
+
+/* th = header */
+th{
+  padding-right: 50px;
+  padding-left: 50px;
+  font-weight: normal;
+}
+
+/* td = cell */
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+
+.TableHeader{
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}

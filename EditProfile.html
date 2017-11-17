@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Audatex Office Profiles | Edit Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="Theale Directory.html">
+    <img src="images/Audatex.jpg" alt=“Audatex Logo” width=241 height=150>
+  </a>
+  <h1>Audatex Staff Directory</h1>
+  <ul>
+      <li><a href="Theale Directory.html">Home</a></li>
+      <li><a href="AddProfilePage.html">Add Profile</a></li>
+      <li><a href="ViewProfile.html">View Profile</a></li>
+      <li class="Sel"><a href="EditProfile.html">Edit Profile</a></li>
+      <li><a href="ViewAll.html">View All Profiles</a></li>
+  </ul>
+
+  <script>
+      //Validation to stop empty input
+  function validateFirstName() {
+      var first = document.forms["EditProfileForm"]["firstname"].value;
+      if (first == "") {
+          alert("First Name Required");
+          return false;
+      }
+  }
+
+  function validateLastName() {
+      var last = document.forms["EditProfileForm"]["lastname"].value;
+      if (last == "") {
+          alert("Last Name Required");
+          return false;
+      }
+  }
+
+  function validateAge() {
+      var age = document.forms["EditProfileForm"]["myAge"].value;
+      if (age == "") {
+          alert("Age Required");
+          return false;
+      }
+  }
+      //End of empty input validation
+
+  function validateJob() {
+      var job = document.forms["EditProfileForm"]["myJobDesc"].value;
+      if (job == "") {
+          alert("Job Title Required");
+          return false;
+      }
+  }
+
+  function onlyNumb(e, t) {
+      try {
+          if (window.event) {
+              var charCode = window.event.keyCode;
+          }
+          else if (e) {
+              var charCode = e.which;
+          }
+          else { return true; }
+          if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+              return false;
+          }
+          return true;
+          }
+          catch (err) {
+          alert(err.Description);
+      }
+  }
+
+
+  function onlyStr(e, t) {
+       try {
+           if (window.event) {
+               var charCode = window.event.keyCode;
+           }
+           else if (e) {
+               var charCode = e.which;
+           }
+           else { return true; }
+           if (charCode > 31 && (charCode < 65)) {
+               return false;
+           }
+           return true;
+           }
+           catch (err) {
+           alert(err.Description);
+       }
+   }
+  /* Text Boxes on Add Profile Page */
+  function inputFocus(i){
+      if(i.value==i.defaultValue){ i.value=""; i.style.color="#000"; }
+  }
+  function inputBlur(i){
+      if(i.value==""){ i.value=i.defaultValue; i.style.color="#888"; }
+  }
+
+  </script>
+
+
+<h2> Edit Profile </h2>
+<p>Search for profile:</p>
+
+   <input type="text" name="search" placeholder="Enter Name...">
+   <button class="searchButton" >Search</button>
+
+   <form name = "EditProfileForm" method  onsubmit=" return validateFirstName() & validateLastName() & validateAge() & validateJob()" class ="formItems">
+
+           <b>Name:</b>    <br/>
+           <input class="textBox" type = "text" name = firstname id = "firstname"  style = "width:200px;height:20px;" onkeypress="return onlyStr(event,this);" onfocus="inputFocus(this)" onblur="inputBlur(this)"/>
+           <input class="textBox" type = "text" name = lastname id = "lastname"  style = "width:200px;height:20px;" onkeypress="return onlyStr(event,this);" onfocus="inputFocus(this)" onblur="inputBlur(this)"/>
+
+<br>
+           <b>Age:</b> <br/>
+           <input class="textBox" type = "text"  id = "myAge"  name = "Age" style = "width:200px;height:20px;" onkeypress="return onlyNumb(event,this);" onfocus="inputFocus(this)" onblur="inputBlur(this)"/>
+<br>
+
+           <b>Job Title:</b> <br/>
+           <input class="textBox" type = "text" id = "myJobDesc"  style = "width:200px;height:20px;" onfocus="inputFocus(this)" onblur="inputBlur(this)"/>
+<br>
+
+       <input class="searchButton" type = "submit" id = "Submit form"  value = "Update"/>
+
+
+
+
+   </form>
+</form>
+</body>
+<html>

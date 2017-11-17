@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Audatex Office Profiles | View Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="Theale Directory.html">
+    <img src="images/Audatex.jpg" alt=“Audatex Logo” width=241 height=150>
+  </a>
+
+  <h1>Audatex Staff Directory</h1>
+  <ul>
+      <li><a href="Theale Directory.html">Home</a></li>
+      <li><a href="AddProfilePage.html">Add Profile</a></li>
+      <li><a href="ViewProfile.html">View Profile</a></li>
+      <li><a href="EditProfile.html">Edit Profile</a></li>
+      <li class="Sel"><a href="ViewAll.html">View All Profiles</a></li>
+  </ul>
+<h2> View All Profiles </h2>
+
+<form action="ViewAll.html" class="SearchBar">
+  <p>Search for profile:</p>
+
+  <select name="FieldSelected">
+    <option>First Name</option>
+    <option>Last Name</option>
+    <option>Age</option>
+    <option>Job Role</option>
+  </select>
+
+   <input type="text" name="search" placeholder="Enter details...">
+   <button type="submit" class="viewAllButton" onclick="searchAllFunction()">Search</button>
+</form>
+
+
+<table class="ProfilesTable">
+  <tbody>
+    <tr>
+      <th class="TableHeader">First Name</th>
+      <th class="TableHeader">Last Name</th>
+      <th class="TableHeader">Age</th>
+      <th class="TableHeader">Job Role</th>
+    </tr>
+    <tr>
+      <th>Josh</th>
+      <th>Kennedy</th>
+      <th>18</th>
+      <th>Apprentice</th>
+    </tr>
+</body>
+<html>

@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Theale Office Profiles </title>
+
+    <link rel="Stylesheet" href="styles.css">
+
+    <a href="Theale Directory.html">
+      <img src="images/Audatex.jpg" alt=“Audatex Logo” width=241 height=150>
+    </a>
+    <h1>Audatex Staff Directory</h1>
+    <ul>
+        <li><a href="Theale Directory.html">Home</a></li>
+        <li class="Sel"><a href="AddProfilePage.html">Add Profile</a></li>
+        <li><a href="ViewProfile.html">View Profile</a></li>
+        <li><a href="EditProfile.html">Edit Profile</a></li>
+        <li><a href="ViewAll.html">View All Profiles</a></li>
+    </ul>
+
+
+
+
+        <script>
+            //Validation to stop empty input
+        function validateFirstName() {
+            var first = document.forms["AddProfileForm"]["firstname"].value;
+            if (first == "") {
+                alert("First Name Required");
+                return false;
+            }
+        }
+
+        function validateLastName() {
+            var last = document.forms["AddProfileForm"]["lastname"].value;
+            if (last == "") {
+                alert("Last Name Required");
+                return false;
+            }
+        }
+
+        function validateAge() {
+            var age = document.forms["AddProfileForm"]["myAge"].value;
+            if (age == "") {
+                alert("Age Required");
+                return false;
+            }
+        }
+            //End of empty input validation
+
+        function validateJob() {
+            var job = document.forms["AddProfileForm"]["myJobDesc"].value;
+            if (job == "") {
+                alert("Job Title Required");
+                return false;
+            }
+        }
+
+        function onlyNumb(e, t) {
+            try {
+                if (window.event) {
+                    var charCode = window.event.keyCode;
+                }
+                else if (e) {
+                    var charCode = e.which;
+                }
+                else { return true; }
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                    return false;
+                }
+                return true;
+                }
+                catch (err) {
+                alert(err.Description);
+            }
+        }
+
+
+        function onlyStr(e, t) {
+             try {
+                 if (window.event) {
+                     var charCode = window.event.keyCode;
+                 }
+                 else if (e) {
+                     var charCode = e.which;
+                 }
+                 else { return true; }
+                 if (charCode > 31 && (charCode < 65)) {
+                     return false;
+                 }
+                 return true;
+                 }
+                 catch (err) {
+                 alert(err.Description);
+             }
+         }
+        /* Text Boxes on Add Profile Page */
+        function inputFocus(i){
+            if(i.value==i.defaultValue){ i.value=""; i.style.color="#000"; }
+        }
+        function inputBlur(i){
+            if(i.value==""){ i.value=i.defaultValue; i.style.color="#888"; }
+        }
+
+
+        </script>
+
+
+</head>
+
+    <body>
+<!--action="ViewProfilePage.html"> -->
+    <h2>Personal Information</h2>
+    <form name = "AddProfileForm" method  onsubmit=" return validateFirstName() & validateLastName() & validateAge() & validateJob()" class ="formItems">
+
+            <b>Name:
+            <input class="textBox" type = "text" placeholder="First" name = firstname id = "firstname"  style = "width:200px;height:20px;" onkeypress="return onlyStr(event,this);" onfocus="inputFocus(this)" onblur="inputBlur(this)"/>
+            <input class="textBox" type = "text" placeholder="Last" name = lastname id = "lastname"  style = "width:200px;height:20px;" onkeypress="return onlyStr(event,this);" onfocus="inputFocus(this)" onblur="inputBlur(this)"/>
+<br>
+
+            <b>Age:
+            <input class="textBox" placeholder="e.g. 23"type = "text"  id = "myAge"  name = "Age" style = "width:200px;height:20px;" onkeypress="return onlyNumb(event,this);" onfocus="inputFocus(this)" onblur="inputBlur(this)"/>
+<br>
+
+            <b>Job Title:
+            <input class="textBox" placeholder="e.g. Manager"type = "text" id = "myJobDesc"  style = "width:200px;height:20px;" onfocus="inputFocus(this)" onblur="inputBlur(this)"/>
+<br>
+
+        <input class="searchButton" type = "submit" id = "Submit form"  value = "Submit"/>
+
+
+
+
+    </form>
+    </body>
+</html>
